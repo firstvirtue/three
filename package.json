@@ -17,8 +17,8 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "file-loader": "^6.0.0",
     "lodash": "^4.17.19",
-    "three": "^0.118.3",
-    "three-gltf-loader": "^1.111.0"
+    "three": "^0.118.3"
   }
 }

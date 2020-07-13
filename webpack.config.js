@@ -8,8 +8,20 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   devServer: {
+    publicPath: '/public/',
     watchOptions: {
       hot: true
     }
+  },
+  module: {
+    rules: [{ 
+      test: /\.(gltf)$/, 
+      use: [{
+          loader: 'file-loader',
+          // options: {
+          //   outputPath: 'assets/models'
+          // }
+      }]
+    }]
   }
 }

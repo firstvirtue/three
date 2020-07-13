@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import * as THREE from 'three';
-import GLTFLoader from 'three/examples/jsm/loaders/GLTFLoader';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+// import model from '/assets/models/ocean.gltf';
 
 function component() {
   const element = document.createElement('div');
@@ -22,10 +23,14 @@ function component() {
 
   camera.position.z = 5;
 
+  var light = new THREE.PointLight( 0xff0000, 1, 100 );
+  light.position.set( 50, 50, 50 );
+  scene.add( light );
+
   const loader = new GLTFLoader();
   loader.load(
     // resource URL
-    'models/gltf/duck/duck.gltf',
+    '/models/cup.glb',
     // called when the resource is loaded
     function ( gltf ) {
   
