@@ -2,23 +2,27 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: {
+    app: path.resolve(__dirname, 'src', 'index.js'),
+  },
   output: {
-    filename: 'main.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   devServer: {
-    publicPath: '/public/',
-    watchOptions: {
-      hot: true
-    }
+    contentBase: './dist',
+    open: true,
+    inline: true,
+    hot: true,
+    port: 3000
   },
+  watch: true,
   module: {
     rules: [{ 
       test: /\.(gltf)$/, 
       use: [{
           loader: 'file-loader',
-          // options: {
+          // options: {3
           //   outputPath: 'assets/models'
           // }
       }]

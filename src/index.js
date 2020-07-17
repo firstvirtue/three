@@ -30,7 +30,7 @@ function component() {
   const loader = new GLTFLoader();
   loader.load(
     // resource URL
-    '/models/cup.glb',
+    '/public/models/cup.glb',
     // called when the resource is loaded
     function ( gltf ) {
   

@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack && webpack-dev-server --open --content-base ./dist"
+    "dev": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
